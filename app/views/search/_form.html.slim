@@ -1,0 +1,5 @@
+= form_tag(results_path) do
+  = label_tag(:query) do
+    |Search for:
+  = text_field_tag(:query)
+  = submit_tag(:search)

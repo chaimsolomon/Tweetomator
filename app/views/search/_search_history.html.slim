@@ -1,0 +1,9 @@
+- if session[:search_history].present?
+  h3 Search History:
+  - session[:search_history].each do |search_term, search_date, results|
+    h4
+      |Search term was: #{search_term}
+    h4
+      |Search date: #{search_date}
+    h4 Results were:
+    = render('format_results', result_texts: results)
